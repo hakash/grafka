@@ -18,6 +18,7 @@ type Query {
 
 type Mutation {
     newCluster(name: String!, config: String!): KafkaCluster!
+    newTopic(clusterID: ID!, request: KafkaNewTopicRequest!): KafkaTopicListing!
     deleteCluster(clusterId: ID!): Boolean
     updateCluster(clusterId: String!, name: String!, config: String!): KafkaCluster!
 }
